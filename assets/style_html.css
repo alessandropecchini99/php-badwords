@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: grey;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  gap: 1em;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form input,
+textarea {
+  width: 250px;
+  padding: 10px;
+  border: 0px;
+  border-radius: 5px;
+  outline: none;
+  resize: none;
+}
+
+form div {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+}
+
+button {
+  padding: 5px 10px;
+  border-radius: 20px;
+  border: 0px;
+  font-size: 1em;
+}

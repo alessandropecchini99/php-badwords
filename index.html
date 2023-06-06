@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style_html.css" />
+    <title>Form Parola</title>
+  </head>
+
+  <body>
+    <!-- button per inserire velocemente del testo -->
+    <button onclick="autoText()">Auto-inserimento Testo</button>
+    <!-- form del mio primo php -->
+    <form action="censura.php" method="GET">
+      <!-- input $parola -->
+      <input
+        type="text"
+        id="myInput"
+        name="parola"
+        placeholder="Parola da censurare"
+      />
+      <!-- input $text che poi diventerà $text_censurato -->
+      <textarea
+        id="myTextarea"
+        name="text"
+        placeholder="Inserisci un testo"
+        cols="30"
+        rows="10"
+      ></textarea>
+      <div>
+        <button type="submit">Censura</button>
+        <button type="reset">Resetta</button>
+      </div>
+    </form>
+
+    <!-- piccolo script per inserimento testo automatico -->
+    <script>
+      var input = document.getElementById("myInput");
+      var textarea = document.getElementById("myTextarea");
+      var inputText = "Pek";
+      var areaText =
+        "Io sono Pek, questo è da sempre il mio nickname! Prima era AlePek, oggi invece è solo Pek oppure scritto con piccole variazioni tipo: Pek99 o Pek23.";
+      function autoText() {
+        input.value = ``;
+        textarea.value = ``;
+        input.value += inputText;
+        textarea.value += areaText;
+      }
+    </script>
+  </body>
+</html>
