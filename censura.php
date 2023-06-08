@@ -2,7 +2,7 @@
     $parola = $_GET['parola'];
     $text = $_GET['text'];
     $text_len = strlen($text);
-    $text_censurato = str_replace($parola, str_repeat("*", strlen($parola)), $text);
+    $text_censurato = str_ireplace($parola, str_repeat("*", strlen($parola)), $text);
 ?>
 
 <!DOCTYPE html>
